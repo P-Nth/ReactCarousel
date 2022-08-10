@@ -1,0 +1,32 @@
+@use '../functions/functions' as *;
+@use '../utilities/minis' as m;
+
+$len: m.$size;
+
+$abreakpoints: (
+    smallscreen: width($len, 420px),
+);
+
+$breakpoints: (
+    smallscreen: width($len, 320px) ,
+    mediumscreen: width($len, 540px),
+    largescreen: width($len, 900px),
+    exlargescreen: width($len, 1300px)
+);
+
+$bbreakpoints: (
+    smallscreen: width($len, 700px),
+);
+
+$cbreakpoints: (
+    smallscreen: width($len, 539px),
+);
+
+$Ibreakpoints: (
+    smallscreen: width($len, 490px),
+    mediumscreen: width($len, 600px),
+    largescreen: width($len, 1030px),
+    exlargescreen: width($len, 1300px),
+    xlargescreen: width($len, 2000px)
+);
+

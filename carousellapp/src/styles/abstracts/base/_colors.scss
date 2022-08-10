@@ -1,0 +1,97 @@
+/* Primary color variables for this project */
+:root {
+    --pf-e-white: hsl(0, 0%, 100%);
+    --pf-e-white-soft: hsl(0, 0%, 97%);
+    --pf-e-white-mute: hsl(0, 0%, 95%);
+    --pf-e-white-fade: hsl(0, 0%, 94%);
+    --pf-e-white-grey: hsl(0, 0%, 88%);
+    --pf-e-white-light-grey: hsl(0, 0%, 86%);
+  
+    --pf-e-black: hsl(0, 0%, 9%);
+    --pf-e-black-soft: hsl(0, 0%, 13%);
+    --pf-e-black-mute: hsl(0, 0%, 16%);
+    --pf-e-black-fade: hsla(0, 0%, 65%, 0.827);
+    --pf-e-black-shadow: hsla(0, 0%, 9%, 0.21);
+    --pf-e-black-shadow1: hsla(0, 0%, 9%, 0.44);
+    --pf-e-black-shadow2: hsla(0, 0%, 0%, 0.66);
+  
+    --pf-e-red: hsl(0, 100%, 50%);
+    --pf-e-pink: hsl(328, 100%, 50%);
+  
+    --pf-e-light-yellow: hsl(42, 100%, 65%);
+  
+    --pf-e-orange: hsl(36, 100%, 50%);
+    --pf-e-light-orange: hsl(24, 99%, 67%);
+
+    --pf-e-ul-bg: hsl(211, 14%, 46%);
+    --pf-e-menu-bg: rgb(120, 127, 132);
+    --pf-indigo-blue: hsl(195, 9%, 36%);
+    --pf-e-grey-indigo: hsl(211, 14%, 46%);
+    --pf-e-dark-indigo: hsl(185, 14%, 34%);
+    --pf-e-indigo-opaque: hsla(185, 14%, 34%, 0.5);
+  
+    --pf-e-blue: hsl(217, 96%, 56%);
+    --pf-e-purple: hsl(298, 100%, 50%);
+    --pf-green-blue: hsl(202, 57%, 24%);
+    --pf-e-blue-tonge: hsl(196, 100%, 50%);
+    --pf-e-light-blue: hsl(206, 100%, 50%);
+    --pf-e-bright-light-blue: hsl(204, 99%, 67%);
+  
+    --pf-e-pale-green: hsl(134, 100%, 71%);
+    --pf-e-norm-green: hsl(136, 100%, 34%);
+    --pf-e-green-dark: hsl(131, 100%, 43%);
+    --pf-e-light-green: hsl(142, 100%, 72%);
+  
+    --pf-e-grey: hsl(0, 0%, 40%);
+    --pf-e-grey-mute: hsl(0, 0%, 49%);
+    --pf-e-grey-light: hsl(0, 0%, 39%); 
+    --pf-e-grey-tonge: hsl(205, 5%, 49%);   
+    --pf-e-grey-soft: hsla(0, 0%, 48%, 0.71);
+    --pf-e-grey-fade: hsla(0, 0%, 88%, 0.835);
+    --pf-e-grey-lousey: hsla(0, 0%, 12%, 0.98);
+  }
+
+  $pf-color: var(--pf-e-white);
+
+
+  // primary colors
+  $primary-text-color: var(--pf-e-black);
+  $primary-text-color-hover: var(--pf-e-white);
+
+  $primary-menu-color: var(--pf-e-menu-bg);
+  $primary-menu-color-active: var(--pf-e-black);
+  
+  $primary-color: var(--pf-e-blue);
+  $primary-color-hover: var(--pf-e-light-blue);
+  
+  $primary-thumb-color: var(--pf-e-grey-mute);
+  $secondary-thumb-color: var(--pf-e-grey-light);
+  $primary-scrollbar-color: var(--pf-e-white-light-grey);
+
+  // button colors
+  $blue: var(--pf-e-blue);
+  $grey: var(--pf-e-grey);
+  $pink: var(--pf-e-pink);
+  $black: var(--pf-e-black);
+  $orange: var(--pf-e-orange);
+  $purple: var(--pf-e-purple);
+  $black-fade: var(--pf-e-black-fade);
+  $lightblue-lighten: var(--pf-e-bright-light-blue);
+
+  // navbar
+  $navbar-color: var(--pf-e-white);
+  $active-ul: var(--pf-green-blue);
+  $navbar-list-bg: var(--pf-e-ul-bg);
+  $menu-item: var(--pf-e-grey-indigo);
+  $drop-down-bg: var(--pf-indigo-blue);
+  $border-color: var(--pf-e-grey-fade);
+  $primary-box-shadow: var(--pf-e-black-shadow);
+  $extended-box-shadow: var(--pf-e-black-shadow1);
+  $ex-extended-box-shadow: var(--pf-e-black-shadow2);
+  
+  
+  $light-theme: ();
+  
+  $body-bg-color-dark-mode: var(--pf-e-black-mute);
+  
+  $dark-theme: ();

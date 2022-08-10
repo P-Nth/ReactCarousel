@@ -1,0 +1,24 @@
+@use "../base/_colors" as *;
+/*  custom scrollbar  */
+
+  ::-webkit-scrollbar {
+    width: 0.3em;
+    background-color: $primary-scrollbar-color;
+    height: 0.1em;
+  }
+  
+  ::-webkit-scrollbar:hover {
+    width: 0.7em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: $primary-thumb-color;
+    border-radius: 0.1em;
+    height: 5em;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $secondary-thumb-color;
+    border-radius: 0.1em;
+  }
+  

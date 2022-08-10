@@ -1,0 +1,225 @@
+@use '../functions/_functions' as *;
+@use '../breakpoints/breakpoints' as b;
+@use '../base/_colors' as c;
+@use '../base/fonts' as f;
+@use './minis' as m;
+
+// columns styles
+
+@mixin col-1($display, $width) {
+    display: $display;
+    grid-template-columns: repeat($width, 1fr);
+    grid-gap: 1em;
+    justify-content: space-evenly; 
+}
+
+@mixin col-2($display, $width) {
+    display: $display;
+    grid-template-columns: repeat($width, 1fr);
+    grid-gap: 1em;
+    justify-content: space-evenly; 
+}
+
+// button styles
+
+@mixin btn($value) {
+    outline: none;
+    border: none;
+    width: width(m.$size, $value);
+}
+
+@mixin btn-main($value) {
+    font-size: 14px;
+    font-weight: 600;
+    align-items: center;
+    letter-spacing: 2px;
+    font-family: f.$font-fahm-5;
+    width: width(m.$size, $value);
+    background-color: c.$primary-color;
+    color: c.$primary-text-color-hover;
+    border-radius: calc(m.$radius * 15);
+    border: width(m.$size, 2px) solid c.$primary-color;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: m.$transition-speed;
+        box-shadow: 0 5px 10px c.$primary-box-shadow;
+        border: calc(m.$border * 2) solid c.$primary-color;
+    }
+}
+
+@mixin btn-primary($value) {
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+    align-items: center;
+    letter-spacing: 2px;
+    padding: width(1, .6em) 0;
+    font-family: f.$font-fahm-13;
+    width: width(m.$size, $value);
+    background-color: c.$primary-color;
+    color: c.$primary-text-color-hover;
+    border-radius: calc(m.$radius * .4);
+
+    &:hover {
+        transform: scale(1.02);
+        transition: m.$transition-speed;
+        background-color: c.$primary-color-hover;
+        box-shadow: 0 5px 10px c.$primary-box-shadow;
+    }
+}
+
+@mixin btn-secondary($value) {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    letter-spacing: 4px;
+    font-family: f.$font-fahm-13;
+    width: width(m.$size, $value);
+    color: c.$primary-color-hover;
+    background-color: transparent;
+    padding: width(m.$size, .8em) 1em;
+    border-radius: calc(m.$radius * 0);
+    border: calc(m.$border * 2) solid c.$black-fade;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: m.$transition-speed;
+        box-shadow: 0 5px 10px c.$primary-box-shadow;
+        border: calc(m.$border * 2) solid c.$primary-color;
+    }
+}
+
+@mixin btn-contact($value) {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    letter-spacing: 4px;
+    font-family: f.$font-fahm-13;
+    width: width(m.$size, $value);
+    background-color: c.$primary-color;
+    color: c.$primary-text-color-hover;
+    border-radius: calc(m.$radius * .2);
+}
+
+@mixin btn-all($value) {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    align-items: center;
+    letter-spacing: 2px;
+    font-family: f.$font-fahm-5;
+    color: c.$primary-text-color;
+    width: width(m.$size, $value);
+    background-color: transparent;
+    border-radius: calc(m.$radius * 15);
+    border: width(m.$size, 2px) solid c.$active-ul;
+
+    &:hover {
+        transform: scale(1.02);
+        background-color: c.$active-ul;
+        color: c.$primary-text-color-hover;
+        transition: m.$transition-speed;
+        box-shadow: 0 5px 10px c.$primary-box-shadow;
+        border: calc(m.$border * 2) solid c.$active-ul;
+    }
+}
+
+// media queries
+@mixin mediaQuery($point) {
+    $min-width: map-get(b.$breakpoints, $point);
+
+    @media only screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+@mixin imediaQuery($point) {
+    $min-width: map-get(b.$Ibreakpoints, $point);
+
+    @media only screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+@mixin smediaQuery($point) {
+    $min-width: map-get(b.$abreakpoints, $point);
+
+    @media only screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+@mixin amediaQuery($swidth, $point) {
+    $min-width: map-get(b.$Ibreakpoints, $point);
+
+    @media only screen and ($swidth: $min-width) {
+        @content;
+    }
+}
+
+@mixin bmediaQuery($swidth, $point) {
+    $min-width: map-get(b.$cbreakpoints, $point);
+
+    @media only screen and ($swidth: $min-width) {
+        @content;
+    }
+}
+// components visibility
+
+@mixin hide {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+}
+
+@mixin show {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+}
+
+@mixin hover {
+    &:hover {
+        border: width(m.$size, 1px) solid c.$active-ul;
+    }
+}
+
+@mixin nohover {
+    &:hover {
+        border: width(m.$size, 0) solid c.$active-ul;
+    }
+}
+
+@mixin neomorphism_1 {
+    box-shadow: -3px -3px 7px rgb(138 150 209 / 20%), 3px 3px 5px rgb(255 255 255 / 30%);
+}
+
+@mixin neomorphism_2 {
+    box-shadow: -3px -3px 7px rgb(237 237 237 / 20%), 3px 3px 5px rgb(140 140 140 / 29%);
+}
+
+@mixin pagefooter {
+    .col-2 {
+        @include amediaQuery(m.$max-width, mediumscreen) {
+            @include hide();
+        }
+        :nth-child(1) {
+            padding-left: 7em;
+        }
+        :nth-child(2) {
+            text-align: right;
+            padding-right: 7em;
+        }
+        p {
+            font-size: 20px;
+            font-family: f.$font-fahm-4;
+        }
+    }
+    
+    @include imediaQuery(xlargescreen) {
+        padding: 0 5em;
+    }
+}

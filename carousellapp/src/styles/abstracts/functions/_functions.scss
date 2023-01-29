@@ -1,0 +1,16 @@
+//button width
+@function width($size, $value) {
+    @if $size == 0 {
+        @return ($size + 1) * $value;
+    } @else {
+        @return (($size * 0) + 1) * $value;
+    }
+}
+
+// @function background($theme) {
+//     @if $theme == rgb(24, 26, 27) {
+//         @return ($primary-text-color = $primary-text-color);
+//     } @else {
+//         @return ($primary-text-color = $primary-text-color);
+//     }
+// }

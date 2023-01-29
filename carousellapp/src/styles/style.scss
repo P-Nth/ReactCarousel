@@ -1,0 +1,170 @@
+@use "./abstracts/" as *;
+
+/* header */
+header {
+    padding: 0.4em 0;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 1.5em;
+    box-shadow: 0 2px 10px rgba(172, 172, 172, 0.885);
+    .logo {
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Courier New", Courier, monospace;
+            letter-spacing: 4px;
+            padding: 0.3em 1em;
+            margin: 0;
+            cursor: pointer;
+        }
+      }
+    .navlinks {
+        display: flex;
+        grid-gap: 0.5em;
+        margin-right: 1em;
+        align-items: center;
+        
+        img {
+            width: 2em;
+            padding: 0.3em 0.5em;
+            border-radius: 2px;
+            transition: 0.25s ease-in-out;
+            
+            &:hover {
+                background-color: rgba(218, 218, 218, 0.578);
+              }
+        }
+    }
+}
+
+.slider_container {
+    .skill {
+        opacity: 0;
+        display: grid;
+        padding: .5em;
+        grid-gap: .5em;
+        cursor: pointer;
+        margin: .5em .8em;
+        position: absolute;
+        align-items: center;
+        border-radius: .3em;
+        justify-content: start;
+        background-color: transparent;
+        border: $border solid transparent;
+        @include neomorphism_1();
+        @include hover();
+
+        p {
+            font-size: width($size, 2.5em);
+            font-weight: bold;
+            @include amediaQuery($max-width, mediumscreen) {
+                max-width: 10em;
+                margin: 0 auto;
+            }
+        }
+        strong {
+            font-size: 2em;
+        }
+        img {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .skilldescr {
+            margin-left: 1em;
+        }
+
+        @include imediaQuery(mediumscreen) {
+            cursor: grab;
+            text-align: left;
+            padding-left: 1em;
+            grid-template-columns: repeat(2, 1fr);
+            img {
+                padding: 7em 0;
+            }
+        }
+
+        @include mediaQuery(largescreen) {
+            grid-gap: 1em;
+            margin: 0 .5em;
+            padding-left: 4em;
+            font-size: width($size, 20px);
+
+            img {
+                padding: 4em 0;
+            }
+
+            p {
+                font-size: width($size, 3em);
+                font-weight: bold;
+            }
+
+            .skilldescr {
+                margin-left: 3em;
+            }
+        }
+
+        @include mediaQuery(exlargescreen) {
+            .skilldescr {
+                margin-left: 4em;
+            }
+            img {
+                padding-right: 4em;
+            }
+        }
+
+        @include imediaQuery(xlargescreen) {
+            grid-template-columns: 33em 40em;
+            margin-top: 3em;
+            border: none;
+            box-shadow: none;
+            @include nohover();
+        }
+    }
+
+    .active-skill {
+        opacity: 1;
+        transition: $transition-speed;
+    }
+
+    .slider_arrows {
+        top: 5em;
+        display: flex;
+        padding: 0 4em;
+        font-size: small;
+        position: relative;
+        justify-content: space-between;
+
+        @include mediaQuery(largescreen) {
+            top: 18em;
+            padding: 0 2em;
+        }
+
+        @include mediaQuery(exlargescreen) {
+            top: 22em;
+            padding: 0 5em;
+        }
+
+        @include mediaQuery(exlargescreen) {
+            top: 30em;
+        }
+        
+        .prev {
+            transform: rotate(-180deg);
+        }
+
+        .prev, .next {
+            padding: 1em;
+            display: grid;
+            cursor: pointer;
+            align-items: center;
+            border-radius: calc($radius + .1em);
+            // background-color: #d5ebff55;
+            @include neomorphism_2();
+        }
+
+        img {
+            width: 2em;
+        }                  
+    }
+}

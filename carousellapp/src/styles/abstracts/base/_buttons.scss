@@ -1,0 +1,34 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/_minis' as m;
+@use './_colors' as c;
+@use './_fonts' as f;
+
+.btn {
+    @include btn(12em);
+}
+
+.btn-main {
+    @include btn-main(10em);
+    @include mediaQuery(largescreen) {
+        @include btn-main(12em);
+    }
+}
+
+.btn-primary {
+    @include btn-primary(100%);
+    @include mediaQuery(largescreen) {
+        @include btn-primary(12em);
+    }
+}
+
+.btn-secondary {
+    @include btn-secondary(12em);
+}
+
+.btn-all {
+    @include btn-all(12em);
+}
+
+.btn-contact {
+    @include btn-contact(5em);
+}
